@@ -12,19 +12,15 @@ export class ClientService {
     constructor(private http: HttpClient){}
 
     public getClients(): Observable<Client[]> {
-        return this.http.get<Client[]>(`${this.apiServerUrl}/clients/all`);
-    }
-
-    public getClientById(id: String): Observable<Client>{
-        return this.http.get<Client>(`${this.apiServerUrl}/clients/find/${id}`)
+        return this.http.get<Client[]>(`${this.apiServerUrl}/clients`);
     }
 
     public addClient(client: Client): Observable<Client> {
-        return this.http.post<Client>(`${this.apiServerUrl}/clients/add`, client);
+        return this.http.post<Client>(`${this.apiServerUrl}/clients/create`, client);
     }
  
     public editClient(client: Client): Observable<Client> {
-        return this.http.put<Client>(`${this.apiServerUrl}/clients/edit/${client.id}`, client);
+        return this.http.put<Client>(`${this.apiServerUrl}/clients/update/${client.id}`, client);
     }
 
     public deleteClient(clientId: number): Observable<void> {
