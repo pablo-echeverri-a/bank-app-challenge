@@ -16,6 +16,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {TableModule} from 'primeng/table';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    TableModule
+    TableModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
