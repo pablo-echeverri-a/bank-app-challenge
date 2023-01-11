@@ -30,7 +30,7 @@ export class ClientAccountsComponent implements OnInit{
 
   ngOnInit(): void {
 
-    const id = this.route.snapshot.paramMap.get('id')!;
+    /*const id = this.route.snapshot.paramMap.get('id')!;
     this.clientService.getClientById(id).subscribe({
       next: (response: Client) => {
         this.client = response;
@@ -38,7 +38,7 @@ export class ClientAccountsComponent implements OnInit{
       error: (error: HttpErrorResponse) => {
         alert(error.message);
       }
-    });
+    });*/
 
   }
 
